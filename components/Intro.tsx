@@ -9,6 +9,8 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from 'react-icons/fa';
 
 import { useSectionInView } from '@/lib/hooks';
+import { useActiveSectionContext } from './context/active-section-context';
+
 
 
 const Intro = () => {
@@ -18,7 +20,10 @@ const Intro = () => {
     const{ref}=useSectionInView("Home",0.5);
 
 
-
+    const{
+        setActiveSection,
+        setTimeOfLastClick
+    }=useActiveSectionContext();
 
 
 
@@ -103,13 +108,17 @@ const Intro = () => {
                 <Link href='#contact'
                     className=' group bg-gray-900 text-white px-7 py-3 flex items-center 
       gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105
-      transition'>
+      transition'
+      onClick={()=>{
+        setActiveSection("Contact");
+        setTimeOfLastClick(Date.now());
+      }}>
                     Contact me here <BsArrowRight
                         className='opacity group-hover:translate-x-1 transition' /></Link>
                 <a className='group bg-white 
       px-7 py-3 flex items-center 
       gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105
-      transition cursor-pointer border border-black/10' href="/CV.pdf" download={true} >
+      transition cursor-pointer borderBlack href="/CV.pdf" download={true} '>
                     Download CV <HiDownload className='opacity-60 group-hover:translate'/>
                 </a>
                 <a className='bg-white flex 
@@ -118,7 +127,7 @@ const Intro = () => {
       items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] 
       hover:text-gray-950
       active:scale-105
-      transition cursor-pointer border border-black/10' href="https://linkedin.com" 
+      transition cursor-pointer borderBlack' href="https://linkedin.com" 
       target="_blank">
                     <BsLinkedin
 
@@ -130,7 +139,7 @@ const Intro = () => {
       items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] 
       hover:text-gray-950
       active:scale-105
-      transition cursor-pointer border border-black/10' href="https://github.com/" 
+      transition cursor-pointer borderBlack' href="https://github.com/" 
       target="_blank">
                     <FaGithubSquare />
 

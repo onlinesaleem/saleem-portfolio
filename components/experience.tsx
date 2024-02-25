@@ -11,15 +11,10 @@ import { useSectionInView } from '@/lib/hooks';
 
 export default function Experience() {
 
-    const { ref,inView} = useSectionInView("Experience");
-    const [isVisible, setIsVisible] = React.useState(false);
+    const { ref} = useSectionInView("Experience");
+   
 
-  React.useEffect(() => {
-    if (inView) {
-      setIsVisible(true);
-    }
-  }, [inView]);
-
+  
     return (
         <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
           <SectionHeading>My experience</SectionHeading>
