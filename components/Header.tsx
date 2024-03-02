@@ -35,7 +35,7 @@ export default function Header() {
                   "flex w-full items-center justify-center px-3 py-3  hover:text-gray-950 transition",
 
                   {
-                    "text-gray-950": activeSection ===
+                    "text-gray-950 dark:text-gray-200": activeSection ===
                       link.name,
                   }
                 )}
