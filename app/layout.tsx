@@ -4,10 +4,11 @@ import { Inter } from 'next/font/google'
 import ActiveSectionContextProvider from '@/components/context/active-section-context'
 import { Toaster } from 'react-hot-toast'
 import Footer from '@/components/footer'
-import Header from '@/components/header'
+
 
 import ThemeContextProvider from '@/components/context/theme-context'
 import ThemeSwitch from '@/components/theme-switch'
+import Header from '@/components/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
