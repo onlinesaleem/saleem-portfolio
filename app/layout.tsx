@@ -8,7 +8,7 @@ import Footer from '@/components/footer'
 
 import ThemeContextProvider from '@/components/context/theme-context'
 import ThemeSwitch from '@/components/theme-switch'
-import Header from '@/components/Header'
+import Header from '@/components/header'
 
 const inter = Inter({ subsets: ['latin'] })
 
