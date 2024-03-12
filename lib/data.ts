@@ -5,6 +5,9 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import ovrImg from "@/public/Ovr.png";
+import qmsImg from "@/public/Qms.png";
+import ticketImg from "@/public/ticketingsystem.png";
 
 export const links = [
   {
@@ -66,42 +69,44 @@ export const projectsData = [
     description:
       "I worked as a full-stack developer on this startup project for 2 years. Hospital industry.",
     tags: ["Java", "Jsp", "mysql", "java -spring"],
-    imageUrl: corpcommentImg,
+    imageUrl: ticketImg,
   },
   {
     title: "OVR system",
     description:
       "full functional OVR system Hospital compilance with the JCI",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+    imageUrl: ovrImg,
   },
   {
     title: "Quality Management System",
     description:
       "fully functional quality management system for healthcare industry ",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    imageUrl: qmsImg,
   },
 ] as const;
 
 export const skillsData = [
   "HTML",
   "CSS",
-  "JavaScript",
+  
   "TypeScript",
   "React",
   "Next.js",
-  "Node.js",
+  "Ms sql",
+  "My sql",
+  
   "Git",
   "Tailwind",
   "Prisma",
   "MongoDB",
   "Redux",
   "GraphQL",
-  "Apollo",
-  "Express",
+  
   "PostgreSQL",
-  "Python",
-  "Django",
+  "Java",
+  "Spring boot",
+  
   "Framer Motion",
 ] as const;
